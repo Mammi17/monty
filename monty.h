@@ -70,9 +70,9 @@ typedef struct ensemb_t
 	char *c;
 	int a;
 	stack_t *h;
-} ensemb;
+} ens_t;
 
-extern ensemb ensemble;
+extern ens_t ens;
 
 void pusher(stack_t **stak, unsigned int l);
 void pallium(stack_t **stak, unsigned int l);

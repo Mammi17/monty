@@ -14,24 +14,24 @@ int main(int argc, char **argv)
 	char *string = NULL;
 	unsigned int l = 0;
 
-	(ensemble.h) = NULL;
-	(ensemble.val) = NULL;
-	(ensemble.file) = NULL;
-	(ensemble.a) = 0;
-	(ensemble.c) = NULL;
+	(ens.h) = NULL;
+	(ens.val) = NULL;
+	(ens.file) = NULL;
+	(ens.a) = 0;
+	(ens.c) = NULL;
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	(ensemble.file) = fopen(argv[1], "r");
-	if ((ensemble.file) == NULL)
+	(ens.file) = fopen(argv[1], "r");
+	if ((ens.file) == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&string, &stat, (ensemble.file)) != EOF)
+	while (getline(&string, &stat, (ens.file)) != EOF)
 	{
 		l++;
 		if (string[0] != '\n')
@@ -39,9 +39,9 @@ int main(int argc, char **argv)
 	}
 	if (string)
 		free(string);
-	if (ensemble.h)
-		free_dlistint(ensemble.h);
+	if (ens.h)
+		free_dlistint(ens.h);
 
-	fclose(ensemble.file);
+	fclose(ens.file);
 	return (EXIT_SUCCESS);
 }

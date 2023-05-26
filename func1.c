@@ -1,5 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
+
+ens_t ens;
 /**
  * pusher - Pushes value to stack.
  * @stak: A pointer to a pointer to the begining of the stack
@@ -11,22 +13,22 @@ void pusher(stack_t **stak, unsigned int l)
 {
 	int el, b = 0;
 
-	if (ensemble.val == NULL)
+	if (ens.val == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
 	}
-	if (ensemble.val[0] == '-')
+	if (ens.val[0] == '-')
 		b++;
-	for (; ensemble.val[b]; b++)
+	for (; ens.val[b]; b++)
 	{
-		if (ensemble.val[b] >= '0' && (ensemble.val[b]) <= '9')
+		if (ens.val[b] >= '0' && (ens.val[b]) <= '9')
 			continue;
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
 	}
-	el = atoi(ensemble.val);
-	if (ensemble.a == 1)
+	el = atoi(ens.val);
+	if (ens.a == 1)
 		add_dnodeint_end(stak, el);
 	else
 		add_dnodeint(stak, el);

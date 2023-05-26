@@ -51,23 +51,23 @@ void run(char *string, unsigned int l)
 {
         void (*f)(stack_t **, unsigned int);
 
-        (ensemble.c) = strtok(string, " \r\t\n");
-        if (ensemble.c[0] != '#' && ensemble.c)
+        (ens.c) = strtok(string, " \r\t\n");
+        if (ens.c[0] != '#' && ens.c)
         {
-                f = ob_funct(ensemble.c);
+                f = ob_funct(ens.c);
                 if (f != NULL)
                 {
-                        if (strcmp(ensemble.c, "push") == 0)
-                                (ensemble.val) = strtok(NULL, " \r\t\n");
-                        f(&(ensemble.h), l);
+                        if (strcmp(ens.c, "push") == 0)
+                                (ens.val) = strtok(NULL, " \r\t\n");
+                        f(&(ens.h), l);
                 }
                 else
                 {
-                        fprintf(stderr, "L%u: unknown instruction %s\n", l, (ensemble.c));
+                        fprintf(stderr, "L%u: unknown instruction %s\n", l, (ens.c));
                         if (string)
                                 free(string);
-                        if ((ensemble.h))
-                                free_dlistint((ensemble.h));
+                        if ((ens.h))
+                                free_dlistint((ens.h));
                         exit(EXIT_FAILURE);
                 }
         }

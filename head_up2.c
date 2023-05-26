@@ -75,8 +75,8 @@ void stack(stack_t **stak, unsigned int l)
 	(void)stak;
 	(void)l;
 
-	if (strcmp((ensemble.c), "queue") != 0)
-		(ensemble.a) = 0;
+	if (strcmp((ens.c), "queue") != 0)
+		(ens.a) = 0;
 }
 
 /**
@@ -91,6 +91,6 @@ void queue(stack_t **stak, unsigned int l)
         (void)stak;
         (void)l;
 
-	if (strcmp((ensemble.c), "queue") == 0)
-		(ensemble.a) = 1;
+	if (strcmp((ens.c), "queue") == 0)
+		(ens.a) = 1;
 }
