@@ -39,3 +39,36 @@ void (*ob_funct(char *opcod))(stack_t **, unsigned int)
 	}
 	return (NULL);
 }
+
+/**
+ * run - execute the opcode command
+ * @string: The line instruction read from the given file.
+ * @l: The line number.
+ * Return: void
+ */
+
+void run(char *string, unsigned int l)
+{
+        void (*f)(stack_t **, unsigned int);
+
+        (ensemble.c) = strtok(string, " \r\t\n");
+        if (ensemble.c[0] != '#' && ensemble.c)
+        {
+                f = ob_funct(ensemble.c);
+                if (f != NULL)
+                {
+                        if (strcmp(ensemble.c, "push") == 0)
+                                (ensemble.val) = strtok(NULL, " \r\t\n");
+                        f(&(ensemble.h), l);
+                }
+                else
+                {
+                        fprintf(stderr, "L%u: unknown instruction %s\n", l, (ensemble.c));
+                        if (string)
+                                free(string);
+                        if ((ensemble.h))
+                                free_dlistint((ensemble.h));
+                        exit(EXIT_FAILURE);
+                }
+        }
+}

@@ -64,41 +64,8 @@ void free_dlistint(stack_t *head)
 }
 
 /**
- * run - execute the opcode command
- * @string: The line instruction read from the given file.
- * @l: The line number.
- * Return: void
- */
-
-void run(char *string, unsigned int l)
-{
-	void (*f)(stack_t **, unsigned int);
-
-	(ensemble.c) = strtok(string, " \r\t\n");
-	if (ensemble.c[0] != '#' && ensemble.c)
-	{
-		f = ob_funct(ensemble.c);
-		if (f != NULL)
-		{
-			if (strcmp(ensemble.c, "push") == 0)
-				(ensemble.val) = strtok(NULL, " \r\t\n");
-			f(&(ensemble.h), l);
-		}
-		else
-		{
-			fprintf(stderr, "L%u: unknown instruction %s\n", l, (ensemble.c));
-			if (string)
-				free(string);
-			if ((ensemble.h))
-				free_dlistint((ensemble.h));
-			exit(EXIT_FAILURE);
-		}
-	}
-}
-
-/**
- * stack_queue - Sets the format of the data to stack and queue.
- * @stack: A double to the begining of the stack
+ * stack - Sets the format of the data to stack and queue.
+ * @stak: A double to the begining of the stack
  * @l: The line number
  * Return: void
  */
@@ -114,7 +81,7 @@ void stack(stack_t **stak, unsigned int l)
 
 /**
  * queue - Sets the format of the data to queue.
- * @stack: A double to the begining of the stack
+ * @stak: A double to the begining of the stack
  * @l: The line number
  * Return: void
  */
