@@ -11,7 +11,7 @@ void pusher(stack_t **stak, unsigned int l)
 {
 	int el, b = 0;
 
-	if ((ensemble.val) == NULL)
+	if (ensemble.val == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
