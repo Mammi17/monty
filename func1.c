@@ -11,22 +11,22 @@ void pusher(stack_t **stak, unsigned int l)
 {
 	int el, a = 0;
 
-	if (value == NULL)
+	if ((ensemble.val) == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
 	}
-	if (value[0] == '-')
+	if ((ensemble.val)[0] == '-')
 		a++;
-	for (; value[a]; a++)
+	for (; (ensemble.val)[a]; a++)
 	{
-		if (value[a] >= '0' && value[a] <= '9')
+		if ((ensemble.val)[a] >= '0' && (ensemble.val)[a] <= '9')
 			continue;
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
 	}
-	el = atoi(value);
-	if (mode == 1)
+	el = atoi(ensemble.val);
+	if (ensemble.a == 1)
 		add_dnodeint_end(stak, el);
 	else
 		add_dnodeint(stak, el);

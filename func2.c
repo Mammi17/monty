@@ -10,7 +10,7 @@
 void modu(stack_t **stak, unsigned int l)
 {
 	int a;
-	stack_t *point = *stack;
+	stack_t *point = *stak;
 	int longueur = dlistint_len(*stak);
 
 	if (longueur < 2)
@@ -86,10 +86,10 @@ void rotal(stack_t **stak, unsigned int l)
 	stack_t *point;
 
 	(void)l;
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (*stak == NULL || (*stak)->next == NULL)
 		return;
 
-	point = *stack;
+	point = *stak;
 	*stak = point->next;
 	(*stak)->prev = NULL;
 	add_dnodeint_end(stak, point->n);

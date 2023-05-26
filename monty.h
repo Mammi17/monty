@@ -54,12 +54,31 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+*struct ensemb_t - a program of variables -args, file, line content
+*@val: value
+*@file: pointer to monty file
+*@c: line content
+*@a: flag change stack <-> queue
+*Description: carries values through the program
+*/
+typedef struct ensemb_t
+{
+		char *val;
+		FILE *file;
+		char *c;
+		int a;
+		stack_t *h
+}  ensemb;
+
+extern ensemb ensemble;
+
 void pusher(stack_t **stak, unsigned int l);
 void pallium(stack_t **stak, unsigned int l);
 void pinte(stack_t **stak, unsigned int l);
 void popu(stack_t **stak, unsigned int l);
 void swaps(stack_t **stak, unsigned int l);
-void add(stack_t **stak, unsigned int l);
+void addi(stack_t **stak, unsigned int l);
 void nop(stack_t **stak, unsigned int l);
 void subtract(stack_t **stak, unsigned int l);
 void div(stack_t **stak, unsigned int l);

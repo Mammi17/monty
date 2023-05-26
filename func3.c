@@ -2,13 +2,13 @@
 #include "monty.h"
 
 /**
- * add - Adds the top two elements of the stack
- * @stack: A double pointer to the begining of the stack
+ * addi - Adds the top two elements of the stack
+ * @stak: A double pointer to the begining of the stack
  * @l: The line number.
  * Return: void
  */
 
-void add(stack_t **stak, unsigned int l)
+void addi(stack_t **stak, unsigned int l)
 {
 	stack_t *ncurrent = *stak, *point = NULL;
 	int count, longueur = dlistint_len(*stak);
@@ -27,7 +27,7 @@ void add(stack_t **stak, unsigned int l)
 
 /**
  * nop - Doesn’t do anything.
- * @stack: A double pointer to the begining of the stack, who void
+ * @stak: A double pointer to the begining of the stack, who void
  * @l: The line number, who void
  * Return: void
  */
@@ -40,7 +40,7 @@ void nop(stack_t **stak, unsigned int l)
 /**
  * subtract - subtracts the top element of the stack from the
  * second top element of the stack.
- * @stack: A double pointer to the beginning of the stack
+ * @stak: A double pointer to the beginning of the stack
  * @l: The line number
  * Return: void
  */
@@ -48,7 +48,7 @@ void nop(stack_t **stak, unsigned int l)
 void subtract(stack_t **stak, unsigned int l)
 {
 	int subt, longueur;
-	stack_t *point = *stack;
+	stack_t *point = *stak;
 
 	longueur = dlistint_len(*stak);
 	if (longueur < 2)

@@ -1,43 +1,37 @@
 #include "monty.h"
 #include <stdio.h>
 
-FILE *file
-
 /**
  * main - Entry point for the monty Interpreter.
- *
- * @ac: The number of arguments passed to the program.
- * @av: The A pointer to an array of characters.
- *
- * Return: (EXIT_SUCCESS) on success (EXIT_FAILURE) on error
- *
+ * @argc: The number of arguments passed to the program.
+ * @argv: The A pointer to an array of characters.
+ * Return: (EXIT_SUCCESS) or (EXIT_FAILURE)
  */
 
 int main(int argc, char **argv)
 {
-	size_t a, stat;
-	stack_t *t
-	char *c, *val, *string = NULL;
+	size_t stat;
+	char *string = NULL;
 	unsigned int l = 0;
 
-	h = NULL;
-	val = NULL;
-	file = NULL;
-	a = 0;
-	c = NULL;
+	(ensemble.h) = NULL;
+	(ensemble.val) = NULL;
+	(ensemble.file) = NULL;
+	(ensemble.a) = 0;
+	(ensemble.c) = NULL;
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	file = fopen(argv[1], "r");
-	if (file == NULL)
+	(ensemble.file) = fopen(argv[1], "r");
+	if ((ensemble.file) == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", arv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&string, &stat, file) != EOF)
+	while (getline(&string, &stat, (ensemble.file)) != EOF)
 	{
 		l++;
 		if (string[0] != '\n')
@@ -46,8 +40,8 @@ int main(int argc, char **argv)
 	if (string)
 		free(string);
 	if (h)
-		free_dlistint(h);
+		free_dlistint((ensemble.h));
 
-	fclose(file);
+	fclose((ensemble.file));
 	return (EXIT_SUCCESS);
 }

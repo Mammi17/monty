@@ -16,7 +16,7 @@ void (*ob_funct(char *opcod))(stack_t**, unsigned int)
 		{"pint", pinte},
 		{"pop", popu},
 		{"swap", swaps},
-		{"add", add},
+		{"add", addi},
 		{"nop", nop},
 		{"sub", subtract},
 		{"div", div},

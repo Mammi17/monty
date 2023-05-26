@@ -72,28 +72,25 @@ void free_dlistint(stack_t *head)
 
 void run(char *string, unsigned int l)
 {
-	char * c, *val;
-	stack_t *h;
+	void (*f)(stack_t**, unsigned int);
 
-	void (*func)(stack_t**, unsigned int);
-
-	c = strtok(string, " \r\t\n");
-	if ( c[0] != '#' && c)
+	(ensemble.c) = strtok(string, " \r\t\n");
+	if ((ensemble.c)[0] != '#' && ensemble.c)
 	{
-		func = ob_funct(c);
-		if (func != NULL)
+		f = ob_funct(ensemble.c);
+		if (f != NULL)
 		{
-			if (strcmp(c, "push") == 0)
-				val = strtok(NULL, " \r\t\n");
-			func(&h, l);
+			if (strcmp(ensemble.c, "push") == 0)
+				(ensemble.val) = strtok(NULL, " \r\t\n");
+			func(&(ensemble.h), l);
 		}
 		else
 		{
-			fprintf(stderr, "L%u: unknown instruction %s\n", l, c);
+			fprintf(stderr, "L%u: unknown instruction %s\n", l, (ensemble.c));
 			if (string)
 				free(string);
-			if (h)
-				free_dlistint(h);
+			if ((ensemble.h))
+				free_dlistint((ensemble.h));
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -106,16 +103,13 @@ void run(char *string, unsigned int l)
  * Return: void
  */
 
-void stack_queue(stack_t **stak, unsigned int l)
+void stack(stack_t **stak, unsigned int l)
 {
-	int a;
-	char *c;
-
 	(void)stak;
 	(void)l;
 
-	if (strcmp(c, "queue") != 0)
-		a = 0;
+	if (strcmp((ensemble.c), "queue") != 0)
+		(ensemble.a) = 0;
 }
 
 /**
@@ -127,13 +121,9 @@ void stack_queue(stack_t **stak, unsigned int l)
 
 void queue(stack_t **stak, unsigned int l)
 {
-        int a;
-        char *c;
-
         (void)stak;
         (void)l;
 
-        if (strcmp(c, "queue") == 0)
-                a = 1;
-                a = 0;
+	if (strcmp((ensemble.c), "queue") == 0)
+		(ensemble.a) = 1;
 }
