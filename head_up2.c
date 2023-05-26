@@ -72,7 +72,7 @@ void free_dlistint(stack_t *head)
 
 void run(char *string, unsigned int l)
 {
-	void (*f)(stack_t**, unsigned int);
+	void (*f)(stack_t **, unsigned int);
 
 	(ensemble.c) = strtok(string, " \r\t\n");
 	if (ensemble.c[0] != '#' && ensemble.c)
