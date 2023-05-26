@@ -15,7 +15,7 @@ void addi(stack_t **stak, unsigned int l)
 
 	if (longueur < 2)
 	{
-		fprintf(stderr, "L%u: can't add, stack too short\n", l)
+		fprintf(stderr, "L%u: can't add, stack too short\n", l);
 		exit(EXIT_FAILURE);
 	}
 	point = ncurrent->next;

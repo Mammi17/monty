@@ -1,12 +1,10 @@
 /**
- * get_func - Maps functions to the corresponding opcode.
- *
- * @opcode: The opcode from the instruction.
- *
+ * ob_funct - Maps functions to the corresponding opcode
+ * @opcod: The opcode from the instruction.
  * Return: A pointer to the function.
  */
 
-void (*ob_funct(char *opcod))(stack_t**, unsigned int)
+void (*ob_funct(char *opcod))(stack_t **, unsigned int)
 {
 	int a = 0;
 

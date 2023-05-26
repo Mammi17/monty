@@ -119,7 +119,7 @@ stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n)
 	}
 	if (current->next == NULL)
 		return (add_dnodeint_end(h, n));
-	point = malloc(sizeof(dlistint_t));
+	point = malloc(sizeof(stack_t));
 	if (point == NULL)
 		return (NULL);
 	point->n = n;

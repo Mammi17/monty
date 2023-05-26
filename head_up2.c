@@ -82,7 +82,7 @@ void run(char *string, unsigned int l)
 		{
 			if (strcmp(ensemble.c, "push") == 0)
 				(ensemble.val) = strtok(NULL, " \r\t\n");
-			func(&(ensemble.h), l);
+			f(&(ensemble.h), l);
 		}
 		else
 		{

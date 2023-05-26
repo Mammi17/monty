@@ -18,9 +18,9 @@ void pusher(stack_t **stak, unsigned int l)
 	}
 	if (ensemble.val[0] == '-')
 		b++;
-	for (; ensemble.val[a]; b++)
+	for (; ensemble.val[b]; b++)
 	{
-		if (ensemble.val[a] >= '0' && (ensemble.val[a]) <= '9')
+		if (ensemble.val[b] >= '0' && (ensemble.val[b]) <= '9')
 			continue;
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
@@ -69,7 +69,7 @@ void pinte(stack_t **stak, unsigned int l)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", l);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (*stack)->n);
+	printf("%d\n", (*stak)->n);
 }
 
 /**
