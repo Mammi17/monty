@@ -16,11 +16,11 @@ void pusher(stack_t **stak, unsigned int l)
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);
 	}
-	if ((ensemble.val)[0] == '-')
+	if (ensemble.val[0] == '-')
 		a++;
-	for (; (ensemble.val)[a]; a++)
+	for (; ensemble.val[a]; a++)
 	{
-		if ((ensemble.val)[a] >= '0' && (ensemble.val)[a] <= '9')
+		if (ensemble.val[a] >= '0' && (ensemble.val[a]) <= '9')
 			continue;
 		fprintf(stderr, "L%u: usage: push integer\n", l);
 		exit(EXIT_FAILURE);

@@ -33,7 +33,7 @@ void (*ob_funct(char *opcod))(stack_t**, unsigned int)
 
 	while (opera[a].opcod)
 	{
-		if (strcmp(opcod, opera[a].opcod) == 0)
+		if (strcmp(opcod, opera[a].opcode) == 0)
 			return (opera[a].f);
 		a++;
 	}

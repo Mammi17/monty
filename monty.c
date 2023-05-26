@@ -40,8 +40,8 @@ int main(int argc, char **argv)
 	if (string)
 		free(string);
 	if (h)
-		free_dlistint((ensemble.h));
+		free_dlistint(ensemble.h);
 
-	fclose((ensemble.file));
+	fclose(ensemble.file);
 	return (EXIT_SUCCESS);
 }
