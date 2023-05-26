@@ -69,7 +69,7 @@ void subtract(stack_t **stak, unsigned int l)
  * @l: The line number
  * Return: void
  */
-void div(stack_t **stak, unsigned int l)
+void divi(stack_t **stak, unsigned int l)
 {
 	int quot;
 	stack_t *point = *stak;

@@ -68,8 +68,8 @@ typedef struct ensemb_t
 		FILE *file;
 		char *c;
 		int a;
-		stack_t *h
-}  ensemb;
+		stack_t *h;
+} ensemb;
 
 extern ensemb ensemble;
 
@@ -81,7 +81,7 @@ void swaps(stack_t **stak, unsigned int l);
 void addi(stack_t **stak, unsigned int l);
 void nop(stack_t **stak, unsigned int l);
 void subtract(stack_t **stak, unsigned int l);
-void div(stack_t **stak, unsigned int l);
+void divi(stack_t **stak, unsigned int l);
 void mult(stack_t **stak, unsigned int l);
 void modu(stack_t **stak, unsigned int l);
 void prchar(stack_t **stak, unsigned int l);
