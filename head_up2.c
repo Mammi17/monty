@@ -75,7 +75,7 @@ void run(char *string, unsigned int l)
 	void (*f)(stack_t**, unsigned int);
 
 	(ensemble.c) = strtok(string, " \r\t\n");
-	if ((ensemble.c)[0] != '#' && ensemble.c)
+	if (ensemble.c[0] != '#' && ensemble.c)
 	{
 		f = ob_funct(ensemble.c);
 		if (f != NULL)

@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	(ensemble.file) = fopen(argv[1], "r");
 	if ((ensemble.file) == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", arv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&string, &stat, (ensemble.file)) != EOF)
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 	}
 	if (string)
 		free(string);
-	if (h)
+	if (ensemble.h)
 		free_dlistint(ensemble.h);
 
 	fclose(ensemble.file);

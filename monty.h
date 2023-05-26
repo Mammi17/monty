@@ -90,7 +90,7 @@ void rotal(stack_t **stak, unsigned int l);
 void rotar(stack_t **stak, unsigned int l);
 void stack(stack_t **stak, unsigned int l);
 void queue(stack_t **stak, unsigned int l);
-
+void run(char *string, unsigned int l)
 size_t dlistint_len(const stack_t *h);
 stack_t *add_dnodeint(stack_t **head, const int n);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
