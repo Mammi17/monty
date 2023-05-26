@@ -9,7 +9,7 @@
 
 void pusher(stack_t **stak, unsigned int l)
 {
-	int el, a = 0;
+	int el, b = 0;
 
 	if ((ensemble.val) == NULL)
 	{
@@ -17,8 +17,8 @@ void pusher(stack_t **stak, unsigned int l)
 		exit(EXIT_FAILURE);
 	}
 	if (ensemble.val[0] == '-')
-		a++;
-	for (; ensemble.val[a]; a++)
+		b++;
+	for (; ensemble.val[a]; b++)
 	{
 		if (ensemble.val[a] >= '0' && (ensemble.val[a]) <= '9')
 			continue;
