@@ -19,7 +19,7 @@ void (*ob_funct(char *opcod))(stack_t **, unsigned int)
 		{"add", addi},
 		{"nop", nop},
 		{"sub", subtract},
-		{"div", div},
+		{"div", divi},
 		{"mul", mult},
 		{"mod", modu},
 		{"pchar", prchar},
@@ -31,11 +31,11 @@ void (*ob_funct(char *opcod))(stack_t **, unsigned int)
 		{NULL, NULL}
 	};
 
-	while (opera[a].opcod)
+	while (opera[a].opcode)
 	{
 		if (strcmp(opcod, opera[a].opcode) == 0)
 			return (opera[a].f);
 		a++;
 	}
-
 	return (NULL);
+}
