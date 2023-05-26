@@ -62,7 +62,7 @@ void pallium(stack_t **stak, unsigned int l)
  * Return: void
  */
 
-void pinte(stack_t **stack, unsigned int l)
+void pinte(stack_t **stak, unsigned int l)
 {
 	if (*stak == NULL)
 	{
@@ -115,7 +115,7 @@ void swaps(stack_t **stak, unsigned int l)
 	}
 
 	point = (*stak)->next;
-	ncurrent->prev = next;
+	ncurrent->prev = point;
 	ncurrent->next = point->next;
 	point->next = ncurrent;
 	point->prev = NULL;
