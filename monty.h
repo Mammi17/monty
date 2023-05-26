@@ -55,20 +55,21 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
-*struct ensemb_t - a program of variables -args, file, line content
-*@val: value
-*@file: pointer to monty file
-*@c: line content
-*@a: flag change stack <-> queue
-*Description: carries values through the program
-*/
+ * struct ensemb_t - a program of variables -args, file, line content
+ * @val: value
+ * @file: pointer to monty file
+ * @c: line content
+ * @a: flag change stack <-> queue
+ * @h: a structure
+ * Description: carries values through the program
+ */
 typedef struct ensemb_t
 {
-		char *val;
-		FILE *file;
-		char *c;
-		int a;
-		stack_t *h;
+	char *val;
+	FILE *file;
+	char *c;
+	int a;
+	stack_t *h;
 } ensemb;
 
 extern ensemb ensemble;
