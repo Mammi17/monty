@@ -1,3 +1,5 @@
+#include "monty.h"
+#include <stdio.h>
 /**
  * ob_funct - Maps functions to the corresponding opcode
  * @opcod: The opcode from the instruction.
